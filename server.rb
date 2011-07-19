@@ -1,11 +1,13 @@
 require 'rubygems'
 require 'sinatra'
 require 'haml'
-require 'data_mapper'
+require 'datamapper'
+
+# connect to database
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3://my.db')
 
 configure do
     set :haml, :format => :html5
-    DataMapper.setup(:default, ENV['DATABASE_URL'] || 'sqlite3://my.db')
 end
 
 class Contact
@@ -16,6 +18,10 @@ class Contact
     property :disc,  Text
 end
 
+# generate Contacts table
+Contact.auto_migrate! unless Contact.storage_exists?
+
+# views
 get '/' do
     haml :index
 end
@@ -37,3 +43,6 @@ post '/contact' do
     end
 end
 
+get '/contact/successful' do
+    haml :success
+end
