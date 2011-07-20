@@ -18,8 +18,6 @@ class Contact
     property :disc,  Text
 end
 
-# generate Contacts table
-Contact.auto_migrate! unless Contact.storage_exists?
 
 # views
 get '/' do
