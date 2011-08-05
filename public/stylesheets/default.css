@@ -17,12 +17,12 @@ body {border-top: 6px solid #333;
 
 h1 {font-family: ChunkFiveRegular; font-size: 25px;}
 
-header {margin: 5px 20px 0 20px;}
+header {margin: 5px 40px 0 40px;}
 #logo  {height: 43px; width:390px;}
 
-nav.main {margin-right: 20px; float: right; width:300px; }
+nav.main {margin-right: 40px; float: right; }
 nav.main ul {display: inline; list-style: none;}
-nav.main ul li {display: inline-block; list-style: none; padding-left: 20px;}
+nav.main ul li {display: inline-block; list-style: none; padding-left: 40px;}
 
 nav.main h1 {font-size: 25px;}
 nav.main a {display: block;}
@@ -31,10 +31,15 @@ nav.main a:visited {text-decoration: none; color: #666;}
 nav.main a:hover {color: #AFEBF9;}
 
 .selected { color: #AFEBF9; }
-section { margin: 20px; min-height: 100%;}
+section { margin: 60px; min-height: 100%;}
 section h1 {color: #333;}
 
-article {margin: 20px;}
+#banner {width: 800px; margin: 0px auto;}
+#banner h1 {font-size: 60px;}
+#banner span {color:#AFEBF9;}
+
+article {margin:40px auto; width: 1000px;}
+article p {margin-top: 10px;}
 
 footer {padding: 0 20px 0 20px; 
         position: relative; 
