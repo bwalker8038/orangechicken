@@ -1,15 +1,30 @@
 !!! 5
-%html{:lang => "eng"}
+%html{:lang=>"eng"}
   %head
-    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}
-    %title
-    %link{:rel => "stylesheet", :type => "text/css", :href=> "/stylesheet/default.css", :media => "screen"}
+    %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=UTF=8"}
+    %meta{:name=>"keywords", :content=>"Calamari Labs, python, ruby, android, design, development, Brad Walker"}
+    %meta{:name=>"title", :content=>"Calamari Labs"}
+    %title Calamari Labs
+    %link{:rel=>"stylesheet", :type=>"text/css", :href=>"stylesheets/reset.css", :media=>"screen"}
+    %link{:rel=>"stylesheet", :type=>"text/css", :href=>"stylesheets/default.css", :media=>"screen"}
   %body
     %header
-      %h1 
-        %a{:href=>'/',:title=>"Brad Needs a Job"}
-          Brad Needs a Job
-    %section.main
-      = yield
+      %a{:href=>"/", :title=>"Calamari Labs"}
+        %img#logo{:src=>"images/logo.png", :alt=>"Calamari Lab"}
+      %nav.main
+        %ul
+          %li
+            %a{:href=>'/', :title=>'Home'}
+              %h1 Home
+          %li
+            %a{:href=>'/work', :title=>'Work'}
+              %h1 Work
+          %li
+            %a{:href=>'/contact', :title=>'Contact'}
+              %h1 Contact
+    %section
+      =yield
+    %footer
+      %p this is my footer
 
 

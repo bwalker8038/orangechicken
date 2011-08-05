@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "ChunkFiveRegular";
+    src: url('../fonts/Chunkfive-webfont.eot');
+    src: url('../fonts/Chunkfive-webfont.eot?#iefix'),
+         url('../fonts/Chunkfive-webfont.woff'),
+         url('../fonts/Chunkfive-webfont.ttf'),
+         url('../fonts/Chunkfive-webfont.svg#ChunkFiveRegular');
+   font-weight: normal;
+   font-style: normal;
+}
+html, body {height: 100%;}
+
+body {border-top: 6px solid #333; 
+      background-image:url('../images/tile.jpg'); repeat-x;
+      color: #333;
+}
+
+h1 {font-family: ChunkFiveRegular; font-size: 25px;}
+
+header {margin: 5px 20px 0 20px;}
+#logo  {height: 43px; width:390px;}
+
+nav.main {margin-right: 20px; float: right; width:300px; }
+nav.main ul {display: inline; list-style: none;}
+nav.main ul li {display: inline-block; list-style: none; padding-left: 20px;}
+
+nav.main h1 {font-size: 25px;}
+nav.main a {display: block;}
+nav.main a:link { color: #666; text-decoration: none;}
+nav.main a:visited {text-decoration: none; color: #666;}
+nav.main a:hover {color: #AFEBF9;}
+
+.selected { color: #AFEBF9; }
+section { margin: 20px; min-height: 100%;}
+section h1 {color: #333;}
+
+article {margin: 20px;}
+
+footer {padding: 0 20px 0 20px; 
+        position: relative; 
+        clear: both; 
+        margin-top: -50px;
+        height:50px;
+        background-color: #333;
+        color: #FFF;
+}
