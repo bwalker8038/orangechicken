@@ -43,7 +43,3 @@ end
 get '/contact/successful' do
     haml :success
 end
-
-get 404 do
-    haml :404
-end
