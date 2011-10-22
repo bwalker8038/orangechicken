@@ -1,7 +1,16 @@
 %form{:method => "post", :id=>'contactInfo'}
+  %label{:class=>'contactLabel'}
+    Name
   %input{:type=>'text', :size=>20, :name=>'name', :id=>'contactName'}
-  %input{:type=>'text', :size=>200, :name=>'email, :id=>contactEmail'} 
-  %input{:type=>'text', :size=>400, :name=>'disc', :id=>'contactDisc'}
+
+  %label{:class=>'contacLabel'}
+    Email Address
+  %input{:type=>'text', :size=>20, :name=>'email, :id=>contactEmail'}
+
+  %label{:class=>'ContactLabel'}
+    Discription
+  %textarea{:rows=>'1', :cols=>'1', :name=>'disc', :id=>'contactDisc'}
+
   %input{:type=>'submit', :value=>'Send', :id=>'contactSubmit'}
 
   
