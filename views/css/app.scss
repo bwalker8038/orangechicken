@@ -1,0 +1,6 @@
+@import "compass/reset.scss";
+@import "compass/layout.scss";
+
+@include sticky-footer(72px, "#wrapper", "#clear-footer", "#footer");
+
+
