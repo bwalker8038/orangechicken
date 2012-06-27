@@ -56,29 +56,62 @@
 .icon-mail:before { content: "\0025"; }
 .icon-feed:before { content: "\0026"; }
 
+/* Style Variables */
+/* =============== */
 
 /* Color Variables */
-/* =============== */
 $orange: #F47421;        // pirmary a:link hover color     
-$grey: #333;             // primary header color
+$grey: #333;            //  primary header color
+$greyBG: #F8F8F8;      //   primary background color
+
+/* Font Variables */
+$bebas: 'BebasNeueRegular';                 // primary header font 
+$sans: Helvetica, Arial, sans-serif;       //  primary body-text font/fallback
+
+/* Widths/Layout Variables */
+$gutter: 80px;
 
 
-/* Typography */
-/* ========== */
-@mixin heading { font: normal 3em BebasNeueRegular; color: $grey; text-transform: uppercase; }
-
+/* Mixins */
+/* ====== */
+@mixin circle { 
+	border-radius: 7em; 
+	-moz-border-radius: 7em;  
+	-webkit-border-radius: 7em; 
+	text-align: center;
+	width: 7em; height: 7em;
+}
 
 /* Layout */
 /* ====== */
-body { font: normal 1em Helvetica, Arial, sans-serif; }
 
+/* body/layout defaults */
+body { font: normal 1em $sans; color: 000; }
+
+h1,h2,h3,h5,h6 { font: $bebas, $sans; color: $grey; }
+
+a { color: $grey; 
+  &:hover { text-decoration: none; color: $orange; }
+}
+
+/* Header */
 header {
   margin: 0 auto;
   
-  h1 { @include heading; margin: 2em 0; }
+  h1 { margin-left: $gutter; @include circle; font-size: 2em; margin: 2em 0; background: $orange; float: left;  
   
-  ul {
-    width: 5em;
+  	a { color: #fff; padding: .75em;
+  	  &:hover { text-decoration: none; color: $grey; }
+  	}
+  }
+  
+  ul { float: right; width: 5em; margin-right: $gutter;
     li { display: inline; margin-left: .5em; }
 }
+
+/* Hero banner */
+#hero { margin-left: $gutter; margin-right: $gutter; background: $greyBG padding: .5em; }
+
+
+
 
