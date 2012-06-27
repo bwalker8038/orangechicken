@@ -7,19 +7,19 @@
     %title Brad Walker
     %link{:rel=>"stylesheet", :type=>"text/css", :href=>"css/app.css", :media=>"screen"}
   %body
-    #header
-      %h1#logo
+    %header
+      %h1
         %a{:href=>"/", :title=>"brad walker"} brad walker
         %ul
           %li
             %a{:href=>'/', :title=>'Home'}
-              %h1 Home
+              %h3 Home
           %li
             %a{:href=>'/work', :title=>'Work'}
-              %h1 Work
+              %h3 Work
           %li
             %a{:href=>'/contact', :title=>'Contact'}
-              %h1 Contact
+              %h3 Contact
     #wrapper
       =yield
       #clear_footer
