@@ -1,6 +1,84 @@
+/* Import Compass mixins */
+/* ===================== */
 @import "compass/reset.scss";
 @import "compass/layout.scss";
 
 @include sticky-footer(72px, "#wrapper", "#clear-footer", "#footer");
 
+
+/* Fonts and Font-Faces */
+/* ==================== */
+
+/* Heading Fonts */
+@font-face {
+  font-family: 'BebasNeueRegular';
+  src: url('assests/fonts/BebasNeue-webfont.eot');
+  src: url('assests/fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+       url('assests/fonts/BebasNeue-webfont.woff') format('woff'),
+       url('assests/fonts/BebasNeue-webfont.ttf') format('truetype'),
+       url('assests/fontsBebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* Icon Fonts */
+@font-face {
+  font-family: 'IcoMoon';
+  src: url('assests/fonts/IcoMoon.eot');
+  src: url('assests/fonts/IcoMoon.eot?#iefix') format('embedded-opentype'),
+	url('assests/fonts/IcoMoon.svg#IcoMoon') format('svg'),
+	url('assests/fonts/IcoMoon.woff') format('woff'),
+	url('assests/fonts/IcoMoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'IcoMoon';
+	content: attr(data-icon);
+	speak: none;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: 'IcoMoon';
+	font-style: normal;
+	speak: none;
+}
+
+/* Font icon classes */
+.icon-github:before  { content: "\0021" }
+.icon-twitter:before { content: "\0022"; }
+.icon-gplus:before { content: "\0023"; }
+.icon-facebook:before { content: "\0024"; }
+.icon-mail:before { content: "\0025"; }
+.icon-feed:before { content: "\0026"; }
+
+
+/* Color Variables */
+/* =============== */
+$orange: #F47421;        // pirmary a:link hover color     
+$grey: #333;             // primary header color
+
+
+/* Typography */
+/* ========== */
+@mixin heading { font: normal 3em BebasNeueRegular; color: $grey; text-transform: uppercase; }
+
+
+/* Layout */
+/* ====== */
+body { font: normal 1em Helvetica, Arial, sans-serif; }
+
+header {
+  margin: 0 auto;
+  
+  h1 { @include heading; margin: 2em 0; }
+  
+  ul {
+    width: 5em;
+    li { display: inline; margin-left: .5em; }
+}
 
