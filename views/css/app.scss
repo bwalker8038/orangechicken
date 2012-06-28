@@ -2,8 +2,9 @@
 /* ===================== */
 @import "compass/reset.scss";
 @import "compass/layout.scss";
+@import "compass/css3.scss";
 
-@include sticky-footer(72px, "#wrapper", "#clear-footer", "#footer");
+@include sticky-footer(72px, "#wrapper", "#fc-clear", "footer");
 
 
 /* Fonts and Font-Faces */
@@ -56,63 +57,63 @@
 .icon-mail:before { content: "\0025"; }
 .icon-feed:before { content: "\0026"; }
 
-/* Style Variables */
-/* =============== */
+// Style Variables 
+// =============== 
 
-/* Color Variables */
-$orange: #F47421;        // pirmary a:link hover color     
-$grey: #333;            //  primary header color
-$greyBG: #F8F8F8;      //   primary background color
+// Color Variables 
+$orange: #F47421;        // pirmary a:link hover color/ logo color  
+$grey:   #333;           // primary header color
+$greyBG: #F8F8F8;        // primary background color
+$white:  #fff;           // primary logo text color/default background color
 
-/* Font Variables */
+// Font Variables 
 $bebas: 'BebasNeueRegular';                 // primary header font 
-$sans: Helvetica, Arial, sans-serif;       //  primary body-text font/fallback
+$sans: Helvetica, Arial, sans-serif;        // primary body-text font/fallback
 
-/* Widths/Layout Variables */
-$gutter: 80px;
+// Widths/Layout Variables 
+$box-width: 980px;
+$center: 0 auto;
 
 
-/* Mixins */
-/* ====== */
-@mixin circle { 
-	border-radius: 7em; 
-	-moz-border-radius: 7em;  
-	-webkit-border-radius: 7em; 
-	text-align: center;
-	width: 3em; height: 3em;
+// Mixins 
+// ====== 
+@mixin box-layout {
+	width: $box-width;
+	margin: $center;
 }
 
 /* Layout */
 /* ====== */
 
 /* body/layout defaults */
-body { font: normal 1em $sans; color: 000; }
+body { font: normal 1em $sans; color: 000; background: $white; }
 
-h1 { font: normal 2em/.75em $bebas, $sans; color: $grey; }
-
-a { color: $grey; 
-  &:hover { text-decoration: none; color: $orange; }
-}
+/* Headings */
+h1,h2 { font-family: $bebas, $sans; color: $grey; font-weight: normal; text-transform: uppercase; }
+h1 { font-size: 4em; } 
+h2 { font-size: 3em; }
 
 /* Header */
 header {
-  margin: 0 auto;
-  
-  h1 { margin-left: $gutter; font-size: 2em; margin: 2em 0; background: $orange; float: left;  
-  
-  	a { color: #fff; text-decoration: none; text-align: center;
-  	  &:hover { text-decoration: none; color: $grey; }
-  	}
-  }
-  
-  ul { float: right; width: 5em; margin-right: $gutter;
-    li { display: inline; margin-left: .5em; }
-  }
+	@include box-layout; 
+	
+	.logo { float: left; color: $white; background: $orange; }
+	
+	ul { float: right;
+		li { display: inline; margin-left: 1em; }
+	}
 }
 
+/* Wrapper */
+#wrapper { @include box-layout; }
+
 /* Hero banner */
-#hero { margin-left: $gutter; margin-right: $gutter; background: $greyBG; }
+#hero { height: 300px; padding: 10px; background: $greyBG; }
 
-
+#work {
+	ul { margin: 20px auto; } 
+		li { display:inline; width: 400px; margin: 20px; }
+  }
+}
 
 
